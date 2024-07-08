@@ -296,10 +296,6 @@ body{
 }
 
 /* datapop */
-.emoji {
-  position: absolute;
-  animation: popUp 1s ease-out forwards;
-}
 
 .wrapper{
   display: flex;
@@ -356,6 +352,22 @@ body{
 #btn:active{
   border: 3px solid darkgray;
   color: darkgray;
+}
+
+.contain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  height: 100vh;
+}
+
+.contain h1{
+  font-size: 40px;
+  font-weight: 200;
+  color: #dca267;
 }
 
 /* footer */
