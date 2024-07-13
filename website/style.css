@@ -603,6 +603,17 @@ body{
   text-align: center;
   background-color: #fff;
   height: 100vh;
+  background-image: url(/source/bg_cat.png);
+  background-size: cover; 
+  background-position: center; 
+  opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.contain.visible {
+  opacity: 1; 
+  transform: translateY(0); 
 }
 
 .contain h1{
@@ -611,7 +622,16 @@ body{
   color: #dca267;
 }
 
-
+/* FAQ */
+.container-faq{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #dca267;
+  height: 100vh;
+}
 
 /* About */
 .about{
@@ -779,7 +799,7 @@ body{
 .contact-left-title h2{
   font-weight: 600;
   color: #fff;
-  font-size: 40px;
+  font-size: 100px;
   margin-bottom: 5px;
 }
 
@@ -847,10 +867,10 @@ body{
   border-radius: 50%;
   object-fit: cover;
   transition: 0.5s;
-  animation: bounceIn 2s ease-in-out;
+  animation: bounceInCon 2s ease-in-out;
 }
 
-@keyframes bounceIn {
+@keyframes bounceInCon {
   0% {
     transform: scale(0.8);
     opacity: 0;

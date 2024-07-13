@@ -93,6 +93,27 @@
     window.addEventListener('scroll', showWrapperOnScroll);
     window.addEventListener('DOMContentLoaded', showWrapperOnScroll);
 
+    // text
+    const sections = document.querySelectorAll('.contain');
+
+    const observerOptions = {
+        root: null,
+        threshold: 0.8 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); 
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section); 
+    });
+    
     // type
     {
         const typed = new Typed('.multiple-text', {
