@@ -1,20 +1,46 @@
  // parallax scrolling
-{
-    document.addEventListener('DOMContentLoaded', () => {
+    {
         let text = document.getElementById('text');
-        let footer = document.querySelector('footer');
-        
-        window.addEventListener('scroll', () => {
+        let pic = document.getElementById('parallax_cat')
+        window.addEventListener('scroll',() => {
             let value = window.scrollY;
-            let maxScroll = footer.offsetTop - window.innerHeight;
-    
-            if (value * 2.5 <= maxScroll) {
-                text.style.marginTop = `${value * 2.5}px`;
-            } else {
-                text.style.marginTop = `${2250}px`;
+
+            text.style.marginTop = value * 2.5 +'px';
+            pic.style.marginTop = value * 1.5 + 'px';
+        });
+    }
+
+// intro
+    {
+        const introText = document.querySelector('.intro-text');
+        const introImage = document.querySelector('.intro img');
+        window.addEventListener('scroll', () => {
+        const introPosition = introText.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.5;
+        if (introPosition < screenPosition) {
+            introText.classList.add('visible');
+            introImage.classList.add('visible');
+        }
+    });
+    }
+
+// card
+    {
+        const cards = document.querySelectorAll('.card__article');
+        const showCardsOnScroll = () => {
+        const triggerBottom = window.innerHeight / 1.3;
+        cards.forEach((card, index) => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < triggerBottom) {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 300); 
             }
         });
-    });}
+    };
+        window.addEventListener('scroll', showCardsOnScroll);
+        window.addEventListener('DOMContentLoaded', showCardsOnScroll);
+    }
     
     //  wake_cat
     {
@@ -53,11 +79,60 @@
         }
     }
 
+    // datapop
+    const wrapper = document.querySelector('.wrapper');
+    const showWrapperOnScroll = () => {
+    const triggerBottom = window.innerHeight / 1.3;
+    const wrapperTop = wrapper.getBoundingClientRect().top;
+
+    if (wrapperTop < triggerBottom) {
+        wrapper.classList.add('visible');
+    }
+};
+
+    window.addEventListener('scroll', showWrapperOnScroll);
+    window.addEventListener('DOMContentLoaded', showWrapperOnScroll);
+
     // type
-   const typed = new Typed('.multiple-text', {
-    strings: ['Computer Engineering','Web Design'],
-    typeSpeed: 70,
-    backSpeed: 70,
-    backDelay:1000,
-    loop: true,
-   })
+    {
+        const typed = new Typed('.multiple-text', {
+        strings: ['Computer Engineering','Web Design','Front-End Deverloper'],
+        typeSpeed: 70,
+        backSpeed: 70,
+        backDelay:1000,
+        loop: true,
+    })
+    }
+
+    // about
+    {
+        const aboutSection = document.querySelector('.about');
+        const showAboutOnScroll = () => {
+        const triggerBottom = window.innerHeight / 1.3;
+        const aboutTop = aboutSection.getBoundingClientRect().top;
+
+        if (aboutTop < triggerBottom) {
+            aboutSection.classList.add('visible');
+        }
+        };
+
+        window.addEventListener('scroll', showAboutOnScroll);
+        window.addEventListener('DOMContentLoaded', showAboutOnScroll);
+    }
+
+    // contact
+    {
+        const contactLeft = document.querySelector('.contact-left');
+
+        const showContactOnScroll = () => {
+          const triggerBottom = window.innerHeight / 1.3;
+          const contactTop = contactLeft.getBoundingClientRect().top;
+        
+          if (contactTop < triggerBottom) {
+            contactLeft.classList.add('visible');
+          }
+        };
+        
+        window.addEventListener('scroll', showContactOnScroll);
+        window.addEventListener('DOMContentLoaded', showContactOnScroll); 
+    }

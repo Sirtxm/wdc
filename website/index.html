@@ -14,27 +14,28 @@
    <header class="header">
     <a href="" class="logo">Meowtion</a>
         
-    <!-- <input type="checkbox" id="check">
+    <input type="checkbox" id="check">
     <label for="check" class="icons">
         <ion-icon name="menu-outline" id="menu-icon"></ion-icon> 
         <ion-icon name="menu-outline" id="close-icon"></ion-icon> 
-    </label> -->
+    </label> 
 
     <nav class="navbar">
-        <a href="index.html" style="--i:0;">Home</a>
+        <a href="#home" style="--i:0;">Home</a>
         <a href="#" style="--i:2;">FAQ</a>
         <a href="#about" style="--i:2;">About</a>
-        <a href="#" style="--i:3;">Contact</a>
+        <a href="#contact" style="--i:3;">Contact</a>
     </nav>
    </header>
 
    <!--Parallax -->
    <section class="parallax"> 
+        <img src="/source/main.png" alt="" id="parallax_cat">
         <h2 id="text">Welcome</h2>
    </section>
 
    <!-- Intro -->
-    <section class="intro">
+    <section class="intro" id="home">
         <div class="intro-text">
             <h5>Welcome to</h5> 
             <h1>Meowtion</h1>
@@ -89,7 +90,8 @@
         <section class="contain">
                 <h1>"The cat who wakes up late will be missed by the cat who wakes up early."</h1>
         </section>
-    
+
+   
     <!-- About -->
         <section class="about" id="about">
             <div class="about-img">
@@ -104,6 +106,24 @@
                 <p>I am a third-year student at Rajamangala University of Technology Thanyaburi in Thailand. <br> The inspiration for creating this website came to me while thinking about how to incorporate the concept of motion. At that moment, I turned and noticed my cat, who was sitting quietly. He then stared into my eyes as if to say, "Take me and start a website." I realized there was nothing more interesting and amazing than the movement of a cat. I wanted to introduce my cat to everyone as a representation of swift yet silent motion. Thank you for visiting my website.</p>
             </div>
         </section>
+
+        <!-- Contact -->
+     <section class="contact-container" id="contact">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" onsubmit="reset(); return false;">
+            <div class="contact-left-title">
+                <h2>Contact us</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="2dc6f73e-d3b8-48aa-9ad1-cf69d5e48bb3">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit <img src="/source/logo.png" alt=""></button>
+        </form>
+        <div class="contact-right">
+            <img src="/source/card/motion_2.JPG" alt="">
+        </div>
+     </section>
 
         <!-- Footer -->
     <footer>
@@ -121,10 +141,10 @@
         </ul>
 
         <ul class="menu_footer">
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#">FAQ</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <p>&copy;2024 Design by Teeraphat Thongchern | All Right Reserved</p>
@@ -132,6 +152,8 @@
 
     <!-- type.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- smtp.js -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!--link ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
