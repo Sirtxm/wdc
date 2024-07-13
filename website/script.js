@@ -11,7 +11,7 @@
             if (value * 2.5 <= maxScroll) {
                 text.style.marginTop = `${value * 2.5}px`;
             } else {
-                text.style.marginTop = `${maxScroll}px`;
+                text.style.marginTop = `${2250}px`;
             }
         });
     });}
@@ -52,3 +52,12 @@
             counter.textContent = clickCount;
         }
     }
+
+    // type
+   const typed = new Typed('.multiple-text', {
+    strings: ['Computer Engineering','Web Design'],
+    typeSpeed: 70,
+    backSpeed: 70,
+    backDelay:1000,
+    loop: true,
+   })
