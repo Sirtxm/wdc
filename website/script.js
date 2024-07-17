@@ -117,7 +117,7 @@
     // type
     {
         const typed = new Typed('.multiple-text', {
-        strings: ['Computer Engineering','Web Design','Front-End Deverloper'],
+        strings: ['Computer Engineering','Cat Lover'],
         typeSpeed: 70,
         backSpeed: 70,
         backDelay:1000,

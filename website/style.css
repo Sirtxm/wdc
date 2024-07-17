@@ -127,7 +127,9 @@ body{
   }
 
   #check:checked~.navbar{
-    height: 283px;
+    height: 180px;
+    background-color: #7a4b2e;
+    opacity: 0.7;
   }
 
   .navbar a{
@@ -138,8 +140,8 @@ body{
     transform: translateY(-50px);
     transition: .3s ease;
     opacity: 0;
+    color: #fff;
   }
-
   
 
   #check:checked~.navbar a{
@@ -618,12 +620,50 @@ body{
 
 .contain h1{
   font-size: 40px;
-  font-weight: 200;
+  font-weight: 500;
   color: #dca267;
 }
 
-/* FAQ */
-.container-faq{
+/* Responsive Content */
+@media (max-width: 1200px) {
+  .contain h1 {
+    font-size: 35px;
+    
+  }
+}
+
+@media (max-width: 992px) {
+  .contain h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contain h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contain h1 {
+    font-size: 20px;
+  }
+  .contain{
+    background: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .contain{
+    background: none;
+  }
+  .contain h1 {
+    font-size: 18px;
+  }
+}
+
+/* Main */
+.container-main{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -641,7 +681,7 @@ body{
   gap: 32px;
   background: #fff;
   height: 100vh;
-  color: #dca267;
+  color: #7a4b2e;
   padding: 100px;
   opacity: 0;
   transform: translateY(50px);
@@ -684,11 +724,12 @@ body{
 }
 
 .about-content span{
-  color: #7a4b2e;
+  color: #dca267;
 }
 
 .about-content p{
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
   margin: 32px 0 48px;
   margin-right: 100px;
 }
