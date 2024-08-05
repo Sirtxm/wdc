@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
+
 body{
   background: #fff;
   min-height: 100vh;
@@ -13,7 +15,7 @@ body{
 }
 
 /* header */
-.header{
+header{
   position: fixed;
   top: 0;
   left: 0;
@@ -24,33 +26,6 @@ body{
   align-items: center;
   z-index: 100;
   background-color: #dca267;
-}
-
-/* .header::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, .01);
-  z-index: -1;
-}
-
-.header::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent,rgb(241, 198, 155));
-  filter: blur(7px);
-  transition: .7s;
-} */
-
-.header:hover::after{
-  left: 100%;
 }
 
 .logo{
@@ -75,7 +50,7 @@ body{
   height: 64px;
 }
 
-.navbar a{
+nav a{
   font-size: 18px;
   color: #fff;
   text-decoration: none;
@@ -85,7 +60,7 @@ body{
   overflow: hidden;
 }
 
-.navbar a::before {
+nav a::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -98,7 +73,7 @@ body{
   transition: all 0.3s ease-in-out;
 }
 
-.navbar a:hover::before {
+nav a:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
@@ -116,7 +91,7 @@ body{
     display: inline-flex;
   }
 
-  .navbar{
+  nav{
     position: absolute;
     top: 100%;
     left: 0;
@@ -126,13 +101,13 @@ body{
     transition: .3s ease;
   }
 
-  #check:checked~.navbar{
+  #check:checked~nav{
     height: 180px;
     background-color: #7a4b2e;
     opacity: 0.7;
   }
 
-  .navbar a{
+  nav a{
     display: block;
     font-size: 18px;
     margin: 24px 0;
@@ -144,7 +119,7 @@ body{
   }
   
 
-  #check:checked~.navbar a{
+  #check:checked~nav a{
     transform: translateY(0);
     opacity: 1;
     transition-delay: calc(.15s * var(--i));
@@ -174,7 +149,7 @@ body{
   overflow: hidden;
 }
 
-#text{
+.parallax h2{
   position: absolute;
   font-size: 200px;
   color: #dca267;
@@ -223,7 +198,7 @@ body{
 .intro{
   position: relative;
   background: #dca267;
-  padding: 100px;
+  padding: 50px;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -259,7 +234,7 @@ body{
   line-height: 1.2;
   margin-bottom: 20px;
   font-size: 69px;
-  margin-top: 20px;
+  margin-top: 0px;
   color: #fff;
 
 }
@@ -280,6 +255,8 @@ body{
   animation: bounceIn 2s ease-in-out;
   opacity: 0; 
   transform: translateY(50px); 
+  margin-right: 120px;
+  margin-left: 0px;
 }
 
 .intro img.visible {
@@ -306,7 +283,7 @@ body{
 
   .intro-text p {
     margin-right: 0;
-    text-align: center; /* Center align the paragraph text */
+    text-align: center; 
   }
 
   .intro img {
@@ -332,7 +309,7 @@ body{
 
   .intro-text p {
     margin-right: 0;
-    text-align: center; /* Center align the paragraph text */
+    text-align: center; 
   }
 
   .intro img {
@@ -359,7 +336,7 @@ body{
 
   .intro-text p {
     margin-right: 0;
-    text-align: center; /* Center align the paragraph text */
+    text-align: center; 
   }
 
   .intro img {
@@ -546,6 +523,7 @@ body{
   margin-top: 40px;
   user-select: none;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 #btn:focus{
@@ -663,15 +641,133 @@ body{
 }
 
 /* Main */
-.container-main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.container-main {
+  padding: 50px 10%;
+  background: linear-gradient(135deg, #f9f9f9 25%, #e0e0e0 100%); /* Gradient background */
   text-align: center;
-  background-color: #dca267;
   height: 100vh;
+  overflow: auto;
 }
+
+.title-main {
+  font-size: 50px;
+  color: #dca267;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* เพิ่มช่องว่างระหว่างตัวอักษร */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* เพิ่มเงาที่ตัวอักษร */
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* เพิ่มช่องว่างระหว่างการ์ด */
+}
+
+.item-main {
+  flex: 1 1 calc(50% - 20px);
+  background-color: #fff;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.item-main:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item-main:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(220, 162, 103, 0.1); /* Light overlay effect */
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.item-main:hover:before {
+  background: rgba(220, 162, 103, 0.2);
+}
+
+.item-main h3 {
+  font-size: 24px;
+  color: #dca267;
+  margin-bottom: 15px;
+  font-weight: 600;
+  z-index: 2;
+  position: relative;
+}
+
+.item-main p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  z-index: 2;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item-main {
+  opacity: 0; /* Hidden by default */
+  transform: translateY(20px); /* Move downwards by default */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition effect */
+}
+
+.item-main.show {
+  animation: slideUp 0.6s ease-out forwards; /* Apply animation when class is added */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .item-main {
+    flex: 1 1 calc(100% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container-main {
+    padding: 30px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-main {
+    font-size: 28px;
+  }
+
+  .item-main {
+    padding: 15px;
+  }
+
+  .item-main h3 {
+    font-size: 20px;
+  }
+
+  .item-main p {
+    font-size: 14px;
+  }
+}
+
 
 /* About */
 .about{

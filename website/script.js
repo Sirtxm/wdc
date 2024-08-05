@@ -1,6 +1,6 @@
  // parallax scrolling
     {
-        let text = document.getElementById('text');
+        let text = document.getElementById('text-parallax');
         let pic = document.getElementById('parallax_cat')
         window.addEventListener('scroll',() => {
             let value = window.scrollY;
@@ -24,6 +24,24 @@
     });
     }
 
+//main
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.item-main');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, {
+      threshold: 0.1 // Adjust based on when you want to trigger the animation
+    });
+
+    items.forEach(item => {
+      observer.observe(item);
+    });
+  });
 // card
     {
         const cards = document.querySelectorAll('.card__article');
@@ -125,6 +143,7 @@
     })
     }
 
+  
     // about
     {
         const aboutSection = document.querySelector('.about');
@@ -157,3 +176,4 @@
         window.addEventListener('scroll', showContactOnScroll);
         window.addEventListener('DOMContentLoaded', showContactOnScroll); 
     }
+

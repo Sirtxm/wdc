@@ -9,28 +9,25 @@
     <title>Meowtion</title>
 </head>
 <body>
-
     <!--NavBar -->
-   <header class="header">
-    <a href="" class="logo">Meowtion</a>
-        
-    <input type="checkbox" id="check">
-    <label for="check" class="icons">
-        <ion-icon name="menu-outline" id="menu-icon"></ion-icon> 
-        <ion-icon name="close-outline" id="close-icon"></ion-icon> 
-    </label> 
-
-    <nav class="navbar">
-        <a href="#home" style="--i:0;" id="home">Home</a>
-        <a href="#about" style="--i:2;">About</a>
-        <a href="#contact" style="--i:3;">Contact</a>
-    </nav>
+    <header>
+        <a href="" class="logo">Meowtion</a>   
+        <input type="checkbox" id="check">
+            <label for="check" class="icons">
+                <ion-icon name="menu-outline" id="menu-icon"></ion-icon> 
+                <ion-icon name="close-outline" id="close-icon"></ion-icon> 
+            </label> 
+        <nav>
+            <a href="#home" style="--i:0;" id="home">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#contact" style="--i:3;">Contact</a>
+        </nav>
    </header>
 
    <!--Parallax -->
    <section class="parallax"> 
-        <img src="/source/bg-parallax.png" alt="" id="parallax_cat">
-        <h2 id="text">Welcome</h2>
+        <img src="/source/bg-parallax.png" alt="Background image with parallax effect" id="parallax_cat">
+        <h2 id="text-parallax">Welcome</h2>
    </section>
 
    <!-- Intro -->
@@ -48,6 +45,30 @@
         <img src="/source/pic_main.JPG"  >
     </figure>
     </section>
+
+     <!-- main -->
+     <section class="container-main">
+        <div class="title-main">Introducing My Cat</div>
+        <div class="content-container">
+            <div class="item-main">
+                <h3>Name</h3>
+                <p>My cat's name is Data. The name comes from the fact that I studied computer engineering and wanted the cat's name to be related to my field of study.</p>
+            </div>
+            <div class="item-main">
+                <h3>Hobbies</h3>
+                <p>Data likes to sit and watch the pigeons making their nests on my roof.</p>
+            </div>
+            <div class="item-main">
+                <h3>Favorite Food</h3>
+                <p> His favorite food is chicken, especially chicken-flavored wet cat food.</p>
+            </div>
+            <div class="item-main">
+                <h3>Best Memories</h3>
+                <p>The best memory I have with my cat is when we first met it when we picked it up from a cat farm. Data is still a little cat.</p>
+            </div>
+        </div>
+    </section>
+    
 
     <!-- Card -->
     <section class="contain_card"> 
@@ -86,16 +107,12 @@
                         <button id="btn">WAKE</button>
         </section>       
     <!-- Content -->
-        <section class="contain">
+        <!-- <section class="contain">
                 <h1>"The cat who wakes up late will be missed by the cat who wakes up early."</h1>
-        </section>
+        </section> -->
 
-    <!-- main -->
-        <section class="container-main">
-            <div></div>
-        </section>
+ 
 
-   
     <!-- About -->
         <section class="about" id="about">
             <div class="about-img">
