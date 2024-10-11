@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = document.querySelector("#btn");
         const counter = document.querySelector("#counter");
     
-        const wakeImg = "/source/datapop//wake.png";
-        const sleepImg = "/source/datapop/sleep.png";
+        const wakeImg = "source/datapop//wake.png";
+        const sleepImg = "source/datapop/sleep.png";
     
         btn.addEventListener("mousedown", wake);
         btn.addEventListener("mouseup", sleep);
